@@ -9,7 +9,6 @@
                        
 Button button = Button(2,BUTTON_PULLUP_INTERNAL); // pin 2 - button
 
-
 // the 5 sensor are in the analogic pins
 // used as digital pins named 14, 15, 16, 17 and 18
 // time-out 2000 and without LED pin
