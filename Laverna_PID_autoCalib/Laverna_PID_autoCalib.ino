@@ -4,22 +4,22 @@
 #include <Wire.h>
 #include <LiquidCrystal.h>
                        
-Button button = Button(2,BUTTON_PULLUP_INTERNAL); // pin 2 - button
+Button button = Button(8,BUTTON_PULLUP_INTERNAL); // pin 2 - button
 
 
 // the 5 sensor are in the analogic pins
 // used as digital pins named 14, 15, 16, 17 and 18
 // time-out 2000 and without LED pin
-QTRSensorsRC qtr((unsigned char[]) {14, 15, 16, 17, 18}, 5, 2000, QTR_NO_EMITTER_PIN);
+QTRSensorsRC qtr((unsigned char[]) {31, 33, 35, 37, 39}, 5, 2000, QTR_NO_EMITTER_PIN);
 
 // display in the pins: R/W - 13, Enable - 12, data - 9, 8, 7 4
-LiquidCrystal lcd(13, 12, 9, 8, 7, 4);
+LiquidCrystal lcd(42, 44, 46, 48, 50, 52);
 
 // Variables definition
 int pinButton = 2; // Button pin
 unsigned int sensors[5]; //  Array to store the sensors values
-int inA1 = 10; //  Dual H-Bridge pins
-int inA2 = 11;
+int inA1 = 3; //  Dual H-Bridge pins
+int inA2 = 4;
 int inB1 = 5;
 int inB2 = 6;
 
@@ -51,7 +51,7 @@ void setup(){
   lcd.setCursor(0, 0);
   lcd.print("Pressione Botao");
   
-  while(!button.isPressed()){    
+  while(button.isPressed()){    
   }
   
   delay(500); // Delay to allow time to take your finger off the button
@@ -89,7 +89,7 @@ void setup(){
 }
 
 void loop(){
-  while(!button.isPressed()){
+  while(button.isPressed()){
   }
   delay(200);
   lcd.clear();
@@ -110,7 +110,9 @@ void loop(){
     
     last_proportional = proportional;
     int power_difference = proportional/10 + integral/10000 + derivative*3/2;
-    
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print(power_difference);
     const int max = 180;
     if(power_difference > max)
       power_difference = max;
