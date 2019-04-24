@@ -13,8 +13,8 @@ Wire Library <br/>
 Liquidcrystal | Optional-(If you're suing LCD Display) | https://github.com/arduino-libraries/LiquidCrystal <br/>
 Button | https://www.arduinolibraries.info/libraries/button <br/>
 
-*Try to Download right from the Arduino IDE for the latest version and from the right source as inteded. <br/>
-All Libraries are included in our repository but make sure that you either upgrade or use the latest ones.
+*Try to Download right from the Arduino IDE for the latest version and from the right source as inteded*. <br/>
+*All Libraries are included in our repository but make sure that you either upgrade or use the latest ones*.
 
 ##### Components we used
 
