@@ -6,26 +6,30 @@ The code includes automatic calibration. Whether you wish for automatic or manua
 
 #### *Special Mentions to elementzonline.com (Elementz Engineers Guild Pvt Ltd.). They provided all the components at an absolutely reasonable price and gave us all the necessary support that we didn't ask for.
 
+### Prerequisites
+
+Qtrsensor 4.0.0 Library | https://github.com/pololu/qtr-sensors-arduino 
+Wire Library <br/>
+Liquidcrystal | Optional-(If you're suing LCD Display) | https://github.com/arduino-libraries/LiquidCrystal <br/>
+Button | https://www.arduinolibraries.info/libraries/button <br/>
+
+*Try to Download right from the Arduino IDE for the latest version and from the right source as inteded. <br/>
+All Libraries are included in our repository but make sure that you either upgrade or use the latest ones.
+
 ##### Components we used
 
-*Cheap Dual Shaft BO Motor and Wheel (x2)
+*Cheap Dual Shaft BO Motor and Wheel (x2) <br/>
 *L298N Motor Driver* (Make Sure that the voltage regular pins are not shorted. Then the
-input will limit to 5V)
-
-*Smallest Chassis* we could find (Prefer the Smallest One)
-
-*Arduino Mega* (Select any arduino board with sufficient pins)
-
-*LIPO 11.1V 2200 mAh*    (2200 mAh isn't necessary but select the one with smaller size and weight, 
-                        Even Li ION Cells are fine)
-                        
-*9V Battery* for Arduino (Small Lipo/Li ION is better, we have ton of Non Rechargeable 9V Batteries as waste
-                        So better use rechargeable ones or utilise long A to B cable if you have a laptop or 
-                        portable power supply)
-                        
-*16x2 LCD Display with a Breakout Board
-
-*One Button Switch and Two Regular Switches* (Prefer Small Ones)
+input will limit to 5V) <br/>
+*Smallest Chassis* we could find (Prefer the Smallest One) <br/>
+*Arduino Mega* (Select any arduino board with sufficient pins) <br/>
+*LIPO 11.1V 2200 mAh*     (2200 mAh isn't necessary but select the one with smaller size and weight, <br/>
+                           Even Li ION Cells are fine) <br/>
+*9V Battery* for Arduino  (Small Lipo/Li ION is better, we have ton of Non Rechargeable 9V Batteries as waste <br/>
+                           So better use rechargeable ones or utilise long A to B cable if you have a laptop or <br/>
+                           portable power supply) <br/>
+*16x2 LCD Display with a Breakout Board <br/>
+*One Button Switch and Two Regular Switches* (Prefer Small Ones) <br/>
 
 ## Authors
 
@@ -33,6 +37,6 @@ Abish Vijayan (https://github.com/abish7643/ | abishvijayan7643@gmail.com)
 
 ### Contributers
 
-Abhijit M (abhimadhu523@gmail.com)
+Abhijit M (abhimadhu523@gmail.com) <br/>
 Adith GM (adithgm14@gmail.com)
 
