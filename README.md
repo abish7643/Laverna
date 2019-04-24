@@ -6,7 +6,7 @@ The code includes automatic calibration. Whether you wish for automatic or manua
 
 ##### *Special Mentions to elementzonline.com (Elementz Engineers Guild Pvt Ltd.). They provided all the components at an absolutely reasonable price and gave us all the necessary support that we didn't ask for.
 
-#### Components
+#### Components we used
 
 Cheap Dual Shaft BO Motor and Wheel (x2)
 
@@ -27,3 +27,11 @@ LIPO 11.1V 2200 mAh    (2200 mAh isn't necessary but select the one with smaller
 16x2 LCD Display with a Breakout Board
 
 One Button Switch and Two Regular Switeches (Prefer Small Ones)
+
+## Authors
+Abish Vijayan (https://github.com/abish7643/ | abishvijayan7643@gmail.com)
+...
+Contributers
+Abhijit M
+Adith GM
+...
