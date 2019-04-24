@@ -17,7 +17,8 @@ Button | https://www.arduinolibraries.info/libraries/button <br/>
 *All Libraries are included in our repository but make sure that you either upgrade or use the latest ones*.
 
 ##### Components we used
-
+*Polulu QTR-8RC Reflectance Sensor* <br/>
+<br/>
 *Cheap Dual Shaft BO Motor and Wheel (x2)* <br/>
 <br/>
 *Castor Wheel* <br/>
