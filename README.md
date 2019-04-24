@@ -8,7 +8,7 @@ The code includes automatic calibration. Whether you wish for automatic or manua
 
 ### Prerequisites
 
-Qtrsensor 4.0.0 Library | https://github.com/pololu/qtr-sensors-arduino 
+Qtrsensor 4.0.0 Library | https://github.com/pololu/qtr-sensors-arduino <br/>
 Wire Library <br/>
 Liquidcrystal | Optional-(If you're suing LCD Display) | https://github.com/arduino-libraries/LiquidCrystal <br/>
 Button | https://www.arduinolibraries.info/libraries/button <br/>
@@ -19,18 +19,25 @@ All Libraries are included in our repository but make sure that you either upgra
 ##### Components we used
 
 *Cheap Dual Shaft BO Motor and Wheel (x2) <br/>
+<br/>
 *L298N Motor Driver* (Make Sure that the voltage regular pins are not shorted. Then the
-input will limit to 5V) <br/>
+                 <br/>input will limit to 5V) <br/>
+                 <br/>
 *Smallest Chassis* we could find (Prefer the Smallest One) <br/>
+<br/>
 *Arduino Mega* (Select any arduino board with sufficient pins) <br/>
+<br/>
 *LIPO 11.1V 2200 mAh*     (2200 mAh isn't necessary but select the one with smaller size and weight, <br/>
-                           Even Li ION Cells are fine) <br/>
+                    <br/>  Even Li ION Cells are fine) <br/>
+                    <br/>
 *9V Battery* for Arduino  (Small Lipo/Li ION is better, we have ton of Non Rechargeable 9V Batteries as waste <br/>
                            So better use rechargeable ones or utilise long A to B cable if you have a laptop or <br/>
                            portable power supply) <br/>
+                           <br/>
 *16x2 LCD Display with a Breakout Board <br/>
+<br/>
 *One Button Switch and Two Regular Switches* (Prefer Small Ones) <br/>
-
+<br/>
 ## Authors
 
 Abish Vijayan (https://github.com/abish7643/ | abishvijayan7643@gmail.com)
