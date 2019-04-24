@@ -1,17 +1,14 @@
-//                Laverna | 3i INC
-//Code changed accordingly to the 
-//Latest Version of QTRSensors 4.0.0 (Previous: 3.1.0)
+//                        Laverna | 3i INC
+//Code changed accordingly to the Latest Version of QTRSensors 4.0.0 (Previous: 3.1.0)
 
 #include <Button.h>
 #include <QTRSensors.h>
 #include <Wire.h>
 #include <LiquidCrystal.h>
                        
-Button button = Button(8,BUTTON_PULLUP_INTERNAL); // pin 2 - button
+Button button = Button(8,BUTTON_PULLUP_INTERNAL); // Pin 8 - Button
 
-// the 5 sensor are in the analogic pins
-// used as digital pins named 14, 15, 16, 17 and 18
-// time-out 2000 and without LED pin
+
 QTRSensors qtrrc;
 const uint8_t SensorCount = 5;
 uint16_t sensorValues[SensorCount];
@@ -34,9 +31,11 @@ int last_proportional;
 int integral;
 
 void setup(){
-  qtrrc.setTypeRC();
-  qtrrc.setSensorPins((const uint8_t[]){25, 27, 29, 31, 33}, SensorCount);
-  qtrrc.setEmitterPin(22);
+  qtrrc.setTypeRC(); //Call the fuction specifying the type of sensor, setTypeRC for QTR-xRC
+  qtrrc.setSensorPins((const uint8_t[]){25, 27, 29, 31, 33}, SensorCount); 
+  //the 5 sensor inputs 25, 27, 29, 31, 33
+  qtrrc.setEmitterPin(22); //LEDON Pin - 22
+  
   lcd.begin(16, 2);
   Serial.begin(9600);    
   set_motors(0,0);
@@ -64,37 +63,38 @@ void setup(){
   while(button.isPressed()){    
   }
   
-  delay(500); // Delay to allow time to take your finger off the button
+  delay(500);
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Auto-calibration");
-  Serial.println("Auto-calibration");
+  Serial.println("Auto-calibration"); 
+
   // Autocalibration: turns to right and after to left and returns to the start position
-  // sensors' calibration
   
-  unsigned int counter; // used as a simple counter
-  for(counter=0; counter<115; counter++){
-    if(counter < 20 || counter >= 60){
-      set_motors(100,-100); // turn to right
+  unsigned int i;
+  for(i=0; i<115; i++){
+    if(i < 20 || i >= 60){
+      set_motors(100,-100); // Call the function set_motors to turn right
     }
     else{
-      set_motors(-100,100); // turn to left
+      set_motors(-100,100); // Call the function set_motors to turn left
     }
-    // This function stores a set of reads of the sensors and 
-    // keep information about the maximum and minimum values found.
     
-    qtrrc.calibrate();
-    // Since w count till 80, the whole time of calibration will be: 80 * 10 = 800 ms
-    delay(10);
+    qtrrc.calibrate();  
+    // This function stores a set of reads of the sensors and keep information about the maximum and minimum values found.
+    delay(10); 
+    // Total Time takes around 10ms * max value holding "i"
   }
-  set_motors(0,0); // ensures that the motors are stopped after calibration proccess
+  
+  set_motors(0,0); //Motors are stopped after Calibration
   lcd.setCursor(0, 1);
   lcd.print("Calibrated");
   delay(1000);
+  
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Press Again");
-  // While button is not pressed shows the position of the line relative to the sensors;
+  //Press Again to follow the line
 
 }
 
@@ -108,19 +108,15 @@ void loop(){
   delay(500);
 
   while(1){
-    // Get the position of the line.  Note that we *must* provide
-    // the "sensors" argument to read_line() here, even though we
-    // are not interested in the individual sensor readings.
-    
-    unsigned int position = qtrrc.readLineBlack(sensorValues);
+    unsigned int position = qtrrc.readLineBlack(sensorValues); //the sensorValues is given as argument to the function readLineBlack or readLineWhite
     
     int proportional = ((int)position) - 2000;
     int derivative = proportional - last_proportional;
     integral += proportional;
-    
     last_proportional = proportional;
     int m_power_difference = proportional/10 + integral/10000 + derivative*3/2;
     int power_difference = (m_power_difference);
+    
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print(power_difference);
