@@ -17,13 +17,14 @@ Button | https://www.arduinolibraries.info/libraries/button <br/>
 *All Libraries are included in our repository but make sure that you either upgrade or use the latest ones*.
 
 ##### Components we used
-
+*Polulu QTR-8RC Reflectance Sensor* <br/>
+<br/>
 *Cheap Dual Shaft BO Motor and Wheel (x2)* <br/>
 <br/>
 *Castor Wheel* <br/>
 <br/>
 *L298N Motor Driver* <br/>
-(Make Sure that the voltage regular pins are not shorted. Then the input will limit to 5V) <br/>
+(Make Sure that the voltage regulator pins are not shorted. Then the input will limit to 5V) <br/>
                  <br/>
 *Smallest Chassis* we could find <br/>
 (Prefer the Smallest One) <br/>
@@ -35,7 +36,7 @@ Button | https://www.arduinolibraries.info/libraries/button <br/>
 (2200 mAh isn't necessary but select the one with smaller size and weight, Even Li ION Cells are fine) <br/>
                     <br/>
 *9V Battery* for Arduino  <br/>
-(Small Lipo/Li ION is better, we have ton of Non Rechargeable 9V Batteries as waste. So better use rechargeable ones or utilise long A to B cable if you have a laptop or portable power supply) <br/>
+(Small Lipo/Li ION is better, we have a ton of Non Rechargeable 9V Batteries as waste. So better use rechargeable ones or utilise long A to B cable if you have a laptop or portable power supply) <br/>
                            <br/>
 *16x2 LCD Display with a Breakout Board* <br/>
 <br/>
@@ -51,3 +52,5 @@ Abish Vijayan (https://github.com/abish7643/ | abishvijayan7643@gmail.com)
 Abhijit M (abhimadhu523@gmail.com) <br/>
 Adith GM (adithgm14@gmail.com)
 
+### License
+This project is licensed under 3 Idiots Incorporations (3i INC.)
