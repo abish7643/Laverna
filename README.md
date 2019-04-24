@@ -1,8 +1,8 @@
 # Laverna | Line Follower Robot | 3i INC
 
-Laverna is made with Qtrsensor 4.0.0 Library which is capable of following Black as well as White lines on contrasting backgrounds. This bot is extremely proficient since PID is interpreted with the motor speed by utilising the enable pins on L298N Module. 
+/Laverna is made with Qtrsensor 4.0.0 Library which is capable of following Black as well as White lines on contrasting backgrounds. This bot is extremely proficient since PID is interpreted with the motor speed by utilising the enable pins on L298N Module. 
 
-The code includes automatic calibration. Whether you wish for automatic or manual calibration is completely upto you, So make the necessary changes in the code which is absolutely easy since the code is documented properly. LCD Display is interfaced to know exactly what the state of bot is. Usage of the same is completely optional. If there's power issue, then try to interpret an LED indicator with the bot instead of the 16x2 LCD preffered over the code.
+/The code includes automatic calibration. Whether you wish for automatic or manual calibration is completely upto you, So make the necessary changes in the code which is absolutely easy since the code is documented properly. LCD Display is interfaced to know exactly what the state of bot is. Usage of the same is completely optional. If there's power issue, then try to interpret an LED indicator with the bot instead of the 16x2 LCD preffered over the code.
 
 #### *Special Mentions to elementzonline.com (Elementz Engineers Guild Pvt Ltd.). They provided all the components at an absolutely reasonable price and gave us all the necessary support that we didn't ask for.
 
