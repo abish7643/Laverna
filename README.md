@@ -18,7 +18,9 @@ Button | https://www.arduinolibraries.info/libraries/button <br/>
 
 ##### Components we used
 
-*Cheap Dual Shaft BO Motor and Wheel (x2) <br/>
+*Cheap Dual Shaft BO Motor and Wheel (x2)* <br/>
+<br/>
+*Castor Wheel* <br/>
 <br/>
 *L298N Motor Driver* <br/>
 (Make Sure that the voltage regular pins are not shorted. Then the input will limit to 5V) <br/>
@@ -35,7 +37,7 @@ Button | https://www.arduinolibraries.info/libraries/button <br/>
 *9V Battery* for Arduino  <br/>
 (Small Lipo/Li ION is better, we have ton of Non Rechargeable 9V Batteries as waste. So better use rechargeable ones or utilise long A to B cable if you have a laptop or portable power supply) <br/>
                            <br/>
-*16x2 LCD Display with a Breakout Board <br/>
+*16x2 LCD Display with a Breakout Board* <br/>
 <br/>
 *One Button Switch and Two Regular Switches* <br/>
 (Prefer Small Ones) <br/>
