@@ -51,3 +51,5 @@ Abish Vijayan (https://github.com/abish7643/ | abishvijayan7643@gmail.com)
 Abhijit M (abhimadhu523@gmail.com) <br/>
 Adith GM (adithgm14@gmail.com)
 
+### License
+This project is licensed under 3 Idiots Incorporations (3i INC.)
