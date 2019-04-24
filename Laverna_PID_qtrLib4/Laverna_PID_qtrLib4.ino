@@ -8,32 +8,26 @@
                        
 Button button = Button(8,BUTTON_PULLUP_INTERNAL); // Pin 8 - Button
 
-
 QTRSensors qtrrc;
 const uint8_t SensorCount = 5;
 uint16_t sensorValues[SensorCount];
-//QTRSensorsRC qtrrc((unsigned char[]) {14, 15, 16, 17, 18}, 5, 2000, QTR_NO_EMITTER_PIN);
 
-// display in the pins: R/W - 13, Enable - 12, data - 9, 8, 7 4
-LiquidCrystal lcd(42, 44, 46, 48, 50, 52);
+LiquidCrystal lcd(42, 44, 46, 48, 50, 52); // 16*2 LCD Display | RS - 42, Enable - 44, Data - 46, 48, 50, 52 (R/W - GND)
 
-// Variables definition
-int pinButton = 13; // Button pin
-//unsigned int sensors[5]; //  Array to store the sensors values
-int inA1 = A0; //  Dual H-Bridge pins
+int pinButton = 8; // Button PIN
+int inA1 = A0;     // Dual H-Bridge pins
 int inA2 = A1;
 int inB1 = A2;
 int inB2 = A3;
-int ENa = 2;
+int ENa = 2;       // Enable Pins
 int ENb = 3;
 
-int last_proportional;
+int last_proportional; //(PID Variables)
 int integral;
 
 void setup(){
   qtrrc.setTypeRC(); //Call the fuction specifying the type of sensor, setTypeRC for QTR-xRC
-  qtrrc.setSensorPins((const uint8_t[]){25, 27, 29, 31, 33}, SensorCount); 
-  //the 5 sensor inputs 25, 27, 29, 31, 33
+  qtrrc.setSensorPins((const uint8_t[]){25, 27, 29, 31, 33}, SensorCount); //the 5 sensor inputs 25, 27, 29, 31, 33
   qtrrc.setEmitterPin(22); //LEDON Pin - 22
   
   lcd.begin(16, 2);
